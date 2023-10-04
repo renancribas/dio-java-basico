@@ -10,16 +10,16 @@ public class Contador {
 
         try {
             contar(parametroUm, parametroDois);
-        }	catch (ParametrosInvalidosException exception) {
+        }catch (ParametrosInvalidosException exception) {
             System.out.println(exception);
-        	}
-				terminal.close();
+    	}
+		terminal.close();
     }
 
     static void contar(int parametroUm, int parametroDois) throws ParametrosInvalidosException {
         if (parametroUm > parametroDois){
             throw new ParametrosInvalidosException("O segundo parâmetro deve ser maior que o primeiro");
-				}
+		}
         int contagem = parametroDois - parametroUm;
         for (int i = 1;i <=contagem ;i++){
             System.out.println("Imprimindo o número " + i);
@@ -30,9 +30,9 @@ public class Contador {
         public ParametrosInvalidosException(String errorMessage) {
             super(errorMessage);
         }
-				@Override
-    		public String toString() {
-        return getMessage(); // Retorna apenas a mensagem de erro.
-    		}
+		@Override
+		public String toString() {
+            return getMessage(); // Retorna apenas a mensagem de erro.
+    	}
     }
 }
