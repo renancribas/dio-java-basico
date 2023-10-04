@@ -6,7 +6,7 @@ public class ContaTerminal {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Por favor, digite seu nome para identificação: ");
-        String nome = scanner.next();
+        String nome = scanner.nextLine();
 
         System.out.println("Digite o número da agência: ");
         String agencia = scanner.next();
